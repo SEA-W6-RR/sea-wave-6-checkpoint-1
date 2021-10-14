@@ -22,10 +22,10 @@ public class Developer extends ITPerson {
     @Override
     public boolean hasWriteAccess() {
         // Add logic to evaluate Write access for Developer here.
-        if (Period.between(this.employmentDate, LocalDate.now().minusMonths(6)).getDays() >= 0) {
-            return true;
-        } else {
+        if (this.employmentDate.isAfter(LocalDate.now().minusMonths(6))) {
             return false;
+        } else {
+            return true;
         }
     }
 }
