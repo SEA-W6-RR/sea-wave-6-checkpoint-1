@@ -1,65 +1,67 @@
 Q: What is the default branch of a git repository called?
-A:
+A: main
 
 Q: How do you change branches using git?
-A:
+A: git checkout "newbranch"
 
 Q: What is the command that allows you to create a local repository from a remote repository?
-A:
+A: git clone "remote-repo"
 
 Q: How do you check the status of the working directory of the local repository?
-A:
+A: git status
 
 Q: What sequence of commands allows me to share new changes in a local repository with an (already configured) remote repository?
-A:
+A: git add "file"
+   git commit -m "message"
+   git push origin "branch"
 
 Q: What is the value of the expression (true && false)?
-A:
+A: false
 
 Q: How can you write `i = i + 1` more concisely?
-A:
+A: i++
 
 Q: What does the term "concatenation" mean?
-A:
+A: joining strings
 
 Q: Why is the check for "equals" with (object == object) not reliable? What should you use for check of equal objects?
-A:
+A: with == you get compared the hash codes, with Object.equals(Object) you get compared the contents
 
 Q: What Collection implementation is ordered, but not sorted?
-A:
+A: List
 
 Q: What Collection implementation has only unique elements?
-A:
+A: Set
 
 Q: How can we find out the number of elements of an array named "students"?
-A:
+A: students.length
 
 Q: How can we find out the number of elements of a list named "students"?
-A:
+A: students.size
 
 Q: In Java, what happens if I divide by Zero (eg. 8 / 0)?
-A:
+A: an exception is thrown
 
 Q: How can you check if File quiz = new File("quiz.txt") exists?
-A:
+A: if (quiz.exists())
 
 Q: Depending on some attributes, an object should return isAllowed(). Should the method be static or not, why?
-A:
+A: should not be static because we want to apply the method on the object, but NOT on the class
 
 Q: What is the signature of the `main` method of a class?
-A:
+A: main(String[] args)
 
 Q: What is an instance of a class?
-A:
+A: an object of a class created by means of the constructor and the key word "new"
 
 Q: Which naming rule should you apply to the naming of a class?
-A:
+A: the class should have the same Name as the file
 
 Q: Why should the usage of java.util.Date be avoided?
-A:
+A: because it's NOT immutable
 
 Q: What Java class do you use to store the Date "31.10.2021"?
-A:
+A: LocalDate
 
 Q: What is the advantage of using Generics?
-A:
+A: Generics will ensure the correctness of whichever type we use
