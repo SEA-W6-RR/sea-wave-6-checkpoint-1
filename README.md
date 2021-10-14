@@ -28,7 +28,7 @@ The following diagram shows the associations between entities of the IT-Crowd, a
 
 * All members of the IT-Crowd are `ITPerson`
 * All `ITPerson` have to implement `hasReadAccess` and `hasWriteAccess` methods which return true or false.
-* `Admin` are `ITPerson` with Read and Write access to Resources, if they are certified, ie. the `lastCertified` date is less than one year ago.
+* `Admin` are `ITPerson` with Read access always, but Write access to Resources if they are certified, ie. the `lastCertified` date is less than one year ago.
 * `Developer` are `ITPerson` with Read access always, but Write access only after their trial period of 6 months, ie. the `employmentDate` is more than 6 months ago.
 * `Support` are `ITPerson` with different levels of access, `level` 0 is no access, `level` 1 is Read access, `level` 2 is Write access.
 
