@@ -1,6 +1,7 @@
 package dev.wilders;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 public class Developer extends ITPerson {
 
@@ -14,12 +15,17 @@ public class Developer extends ITPerson {
     @Override
     public boolean hasReadAccess() {
         // Add logic to evaluate Read access for Developer here.
-        return false;
+        // => no logic needed because Developer has always read access
+        return true;
     }
 
     @Override
     public boolean hasWriteAccess() {
         // Add logic to evaluate Write access for Developer here.
-        return false;
+        if (Period.between(this.employmentDate, LocalDate.now().minusMonths(6)).getDays() >= 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

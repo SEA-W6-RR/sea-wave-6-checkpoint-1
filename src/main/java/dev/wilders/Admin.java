@@ -18,12 +18,17 @@ public class Admin extends ITPerson {
     @Override
     public boolean hasReadAccess() {
         // Add logic to evaluate Read access for Admin here.
-        return false;
+        // => no logic needed because Admin has always read access
+        return true;
     }
 
     @Override
     public boolean hasWriteAccess() {
         // Add logic to evaluate Write access for Admin here.
-        return false;
+        if (this.lastCertified.isAfter(LocalDate.now().minusYears(1))) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
